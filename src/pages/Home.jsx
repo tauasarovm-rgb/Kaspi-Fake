@@ -35,7 +35,7 @@ export default function Home({ onNavigate, onLogout }) {
           <div className="menu-icon">📱</div>
           <div className="menu-text">Мой Банк</div>
         </div>
-        <div className="menu-item" onClick={() => onNavigate('services')}>
+        <div className="menu-item" onClick={() => alert('Платежи')}>
           <div className="menu-icon">📋</div>
           <div className="menu-text">Платежи</div>
         </div>
@@ -51,7 +51,7 @@ export default function Home({ onNavigate, onLogout }) {
           <div className="menu-icon">🎒</div>
           <div className="menu-text">Travel</div>
         </div>
-        <div className="menu-item" onClick={() => alert('Госуслуги')}>
+        <div className="menu-item" onClick={() => onNavigate('services')}>
           <div className="menu-icon">🏪</div>
           <div className="menu-text">Госуслуги</div>
         </div>

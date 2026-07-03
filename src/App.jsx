@@ -20,26 +20,25 @@ export default function App() {
   }
 
   const navigateTo = (newPage, service = null) => {
+    console.log('Navigate to:', newPage, service)
     if (service) {
       setSelectedService(service)
+      setPage('service-detail')
+    } else {
+      setPage(newPage)
     }
-    setPage(newPage)
   }
 
   if (!isLoggedIn) {
     return <Login onLogin={handleLogin} />
   }
 
-  if (page === 'home') {
-    return <Home onNavigate={navigateTo} onLogout={handleLogout} />
+  if (page === 'service-detail') {
+    return <ServiceDetail service={selectedService} onBack={() => setPage('services')} />
   }
 
   if (page === 'services') {
     return <Services onNavigate={navigateTo} onBack={() => setPage('home')} />
-  }
-
-  if (page === 'service-detail' && selectedService) {
-    return <ServiceDetail service={selectedService} onBack={() => setPage('services')} />
   }
 
   return <Home onNavigate={navigateTo} onLogout={handleLogout} />

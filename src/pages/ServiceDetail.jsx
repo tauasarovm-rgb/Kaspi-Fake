@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
- React, { useState } from 'react';
 
 export default function ServiceDetail({ service, onBack }) {
   // Состояние активной вкладки: 'doc' - Документ, 'req' - Реквизиты

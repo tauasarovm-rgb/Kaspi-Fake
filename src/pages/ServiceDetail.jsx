@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ React, { useState } from 'react';
 
 export default function ServiceDetail({ service, onBack }) {
   // Состояние активной вкладки: 'doc' - Документ, 'req' - Реквизиты
@@ -130,13 +130,4 @@ export default function ServiceDetail({ service, onBack }) {
               type="text" 
               name="docNumber" 
               value={formData.docNumber} 
-              onChange={handleChange} 
-              style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc', boxSizing: 'border-box' }}
-            />
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
+              onChange
